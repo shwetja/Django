@@ -1,0 +1,14 @@
+
+<title>Delete Student</title>
+<div class="container jumbotron">
+  <form method="post">
+    {% csrf_token %}
+
+    <center>
+      <p>Do you want to delete <span style="color: red;">{{data.roll}}</span> record ?</p>
+
+    <input type="submit" value="Yes" class="btn btn-outline-danger col-6">
+    <a href="{% url 'show_url' %}"><button type="button" class="btn btn-outline-warning col-6 float-right">NO</button></a>
+      </center>
+  </form>
+</div>

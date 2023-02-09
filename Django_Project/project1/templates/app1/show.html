@@ -1,0 +1,30 @@
+<title>Show info</title>
+
+<table border="3px">
+    <thead>
+    <tr>
+        <th>ROLL</th>
+        <th>FIRST NAME</th>
+        <th>LAST NAME</th>
+        <th>MARKS</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for obj in data %}
+    <tr>
+        <td>{{obj.roll}}</td>
+        <td>{{obj.fname}}</td>
+        <td>{{obj.lname}}</td>
+        <td>{{obj.marks}}</td>
+        <td>
+        <a href="{% url 'update_url' obj.id %}"><button>UPDATE</button></a>
+        <a href="{% url 'delete_url' obj.id %}"><button>DELETE</button></a>
+
+      </td>
+    </tr>
+    </tr>
+    {% endfor%}
+    </tbody>
+</table>
+
